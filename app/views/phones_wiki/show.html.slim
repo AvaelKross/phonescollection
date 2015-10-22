@@ -1,0 +1,45 @@
+= link_to 'Back to phones list', phones_path(@brand)
+
+h3
+  = @phone.name
+  = link_to edit_phone_path(@brand, @phone)
+    span{class="glyphicon glyphicon-edit"}
+
+img{src="#{@phone.photo_url}" class="phone_image"}
+
+p
+  strong Network:
+  = @phone.network
+
+p
+  strong Features:
+  = @phone.features
+
+p
+  strong Weight:
+  = @phone.weight
+
+p
+  strong Size:
+  = @phone.size
+
+p
+  strong Akkum:
+  = @phone.akkum
+
+p
+  strong Limited:
+  = @phone.limited
+
+br
+p
+  strong Notes:
+  br
+  = raw @phone.notes
+
+
+- if signed_in?
+  = link_to 'Add to collection', new_user_users_phones_path(user_id: current_user.id, phone_id: @phone.id)
+  br
+  br
+  = link_to 'Edit', edit_phone_path(@phone) 

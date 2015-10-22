@@ -1,0 +1,16 @@
+= simple_form_for(@phone, url: update_phone_path(@brand, @phone)) do |f|
+  = f.error_notification
+
+  div{class="form-inputs"}
+    = f.input :name
+    = f.input :network
+    = f.input :features
+    = f.input :weight
+    = f.input :size
+    = f.input :akkum
+    = f.input :limited
+    = f.input :notes
+    = f.input :photo_url
+
+  div{class="form-actions"}
+    = f.button :submit

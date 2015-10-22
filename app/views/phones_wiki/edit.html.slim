@@ -1,0 +1,11 @@
+h1
+  |Editing phone 
+  = @phone.name
+
+== render 'form'
+
+= link_to 'Destroy', destroy_phone_path(@brand, @phone), method: :delete
+|  | 
+= link_to 'Show', phone_path(@brand, @phone)
+|  | 
+= link_to 'Back', phones_path(@brand)

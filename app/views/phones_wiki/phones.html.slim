@@ -1,0 +1,15 @@
+h3 Phones
+
+#phones_list
+  input.search placeholder="Search"
+
+  br
+  | Thanks to 
+  a href="http://www.siesam.de" Sascha Meuter
+  |  for phones list.
+  ul.list
+    - for phone in @phones
+      li
+        p.name = link_to phone.name, phone_path(@brand, phone)
+
+br

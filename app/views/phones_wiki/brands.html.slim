@@ -1,0 +1,6 @@
+h3 Brands
+
+ul.list
+  - for brand in @brands
+    li
+      = link_to brand.name, phones_path(brand)
